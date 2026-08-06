@@ -40,7 +40,8 @@ A testbench is a separate Verilog program used to apply different input values t
 Icarus Verilog is a free and open-source Verilog compiler and simulator. It allows users to compile Verilog source files, execute simulations, and generate waveform files for analyzing the behavior of digital circuits.
 
 ### Basic Simulation Flow
-<img width="812" height="459" alt="image" src="https://github.com/user-attachments/assets/f5b822c9-a6a4-4e15-bb2f-ff9e4ca9419d" />
+
+<img width="1854" height="956" alt="image" src="https://github.com/user-attachments/assets/a44facda-404c-476c-85dc-90bd76710edb" />
 
 ---
 # 3. Lab: 2-to-1 Multiplexer Simulation
@@ -87,7 +88,7 @@ gtkwave tb_good_mux.vcd
 
 The generated waveform verifies that the 2-to-1 multiplexer functions correctly. The output changes according to the select signal and follows the selected input.
 
-<img width="749" height="396" alt="image" src="https://github.com/user-attachments/assets/fced93ae-a7af-42bf-8c02-c0ec9c776143" />
+<img width="1841" height="904" alt="image" src="https://github.com/user-attachments/assets/d9d2451c-b813-4243-9fac-30975fde12b1" />
 
 
 ---
@@ -95,7 +96,8 @@ The generated waveform verifies that the 2-to-1 multiplexer functions correctly.
 
 ## Multiplexer Code 
 
-<img width="492" height="177" alt="image" src="https://github.com/user-attachments/assets/51ef121b-ecfd-4816-8bdc-b2b98a5ddeb1" />
+
+<img width="635" height="232" alt="image" src="https://github.com/user-attachments/assets/5a55fb4b-5e43-41dd-9745-11dbee06016f" />
 
 ### Working
 
