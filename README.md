@@ -72,7 +72,7 @@ RTL_Workshop/
 └── README.md
 ```
 
-The workshop is organized day-wise so that each day's experiments, concepts, commands, results, and screenshots can be documented separately.
+
 
 ---
 
