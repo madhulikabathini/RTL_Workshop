@@ -9,6 +9,7 @@ Learning Verilog RTL Design, Simulation and Synthesis using open-source tools.
 * [Day 3 – Flip-Flop Coding and RTL Optimization](#day-3)
 * [Tools Used](#tools-used)
 * [Repository Structure](#repository-structure)
+* [Author](#author)
 
 ---
 
@@ -73,3 +74,10 @@ RTL_Workshop/
 
 The workshop is organized day-wise so that each day's experiments, concepts, commands, results, and screenshots can be documented separately.
 
+---
+
+## Author
+
+**Name:** Bathini Madhulika  
+**College:** Anurag University  
+**Branch:** Electronics and Communication Engineering (ECE)
