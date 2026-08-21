@@ -7,6 +7,9 @@ Learning Verilog RTL Design, Simulation and Synthesis using open-source tools.
 * [Day 1 – RTL Design Through Simulation](#day-1)
 * [Day 2 – Timing Libraries and Synthesis](#day-2)
 * [Day 3 – Flip-Flop Coding and RTL Optimization](#day-3)
+* - [Day 4 – RTL Simulation and Debugging](#day-4)
+- [Day 5 – Synthesis and Netlist Analysis](#day-5)
+- [Day 6 – Timing Analysis and Optimization](#day-6)
 * [Tools Used](#tools-used)
 * [Repository Structure](#repository-structure)
 * [Author](#author)
@@ -42,7 +45,31 @@ Study of different flip-flop coding styles, synthesis, and RTL optimization usin
 [View Day 3](Day_3/README.md)
 
 ---
+## Day 4
 
+### RTL Simulation and Debugging
+
+Studied RTL simulation, testbench execution, waveform generation, and debugging of Verilog designs using simulation tools.
+
+[View Day 4](./Day_4)
+
+
+## Day 5
+
+### Synthesis and Netlist Analysis
+
+Studied RTL synthesis, generated gate-level netlists, analyzed synthesized circuits, and understood the relationship between RTL code and the resulting hardware.
+
+[View Day 5](./Day_5)
+
+
+## Day 6
+
+### Timing Analysis and Optimization
+
+Studied timing concepts, delay analysis, setup and hold requirements, and basic techniques used to optimize digital designs for better timing performance.
+
+[View Day 6](./Day_6)
 ## Tools Used
 
 * **Verilog HDL** – RTL design description
