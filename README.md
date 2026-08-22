@@ -96,6 +96,15 @@ RTL_Workshop/
 ├── Day_3/
 │   └── README.md
 │
+├── Day_4/
+│   └── README.md
+│
+├── Day_5/
+│   └── README.md
+│
+├── Day_6/
+│   └── README.md
+│
 └── README.md
 ```
 
