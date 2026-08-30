@@ -356,7 +356,7 @@ behavior of the synthesized design.
 - How reset affects the design.
 - How GTKWave is used for hardware verification.
 
-![Uploading image.png…]()
+<img width="1584" height="744" alt="image" src="https://github.com/user-attachments/assets/107173e1-a452-4ef7-8f33-2c5213f8d346" />
 
 
 ---
@@ -383,7 +383,8 @@ implementation behaves as expected.
 - How to use GTKWave for final verification.
 - How to verify the synthesized SoC design.
 
-![Final BabySoC Waveform](image14.png)
+<img width="1584" height="744" alt="image" src="https://github.com/user-attachments/assets/063abe4a-ab2c-42f3-9e11-ded267165ea1" />
+
 
 ---
 
