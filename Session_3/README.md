@@ -423,5 +423,4 @@ Gate-Level Simulation
 GTKWave Waveform Analysis
       ↓
 Final Verification
-
-
+ 
