@@ -12,7 +12,7 @@
 
 Introduction to compiling C programs in GitHub Codespaces, running executable files, and analyzing RISC-V assembly instructions using objdump.
 
-[View Session 1](./Session-1)
+[View Session_1](./Session-1)
 
 ---
 
@@ -22,7 +22,7 @@ Introduction to compiling C programs in GitHub Codespaces, running executable fi
 
 Study of Verilog RTL design, simulation, waveform analysis, synthesis using Yosys, and understanding the generated gate-level representation of digital circuits.
 
-[View Session 2](./Session-2)
+[View Session_2](./Session-2)
 
 ---
 
@@ -32,7 +32,7 @@ Study of Verilog RTL design, simulation, waveform analysis, synthesis using Yosy
 
 Study of multiplexer implementation, flip-flop and counter designs, RTL-to-gate-level synthesis, hierarchical modules, waveform verification, and BabySoC analysis.
 
-[View Session 3](./Session-3)
+[View Session_3](./Session-3)
 
 ## Author
 
