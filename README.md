@@ -1,18 +1,21 @@
 # RTL_Workshop
 
-Learning Verilog RTL Design, Simulation and Synthesis using open-source tools.
+Learning Verilog RTL Design, Simulation, Synthesis, and Physical Design using open-source tools.
 
 ## Table of Contents
 
-* [Day 1 – RTL Design Through Simulation](#day-1)
-* [Day 2 – Timing Libraries and Synthesis](#day-2)
-* [Day 3 – Flip-Flop Coding and RTL Optimization](#day-3)
-* - [Day 4 – RTL Simulation and Debugging](#day-4)
+- [Day 1 – RTL Design Through Simulation](#day-1)
+- [Day 2 – Timing Libraries and Synthesis](#day-2)
+- [Day 3 – Flip-Flop Coding and RTL Optimization](#day-3)
+- [Day 4 – RTL Simulation and Debugging](#day-4)
 - [Day 5 – Synthesis and Netlist Analysis](#day-5)
 - [Day 6 – Timing Analysis and Optimization](#day-6)
-* [Tools Used](#tools-used)
-* [Repository Structure](#repository-structure)
-* [Author](#author)
+- [Physical Design](#physical-design)
+  - [PD Module 1](#pd-module-1)
+  - [PD Module 2](#pd-module-2)
+- [Tools Used](#tools-used)
+- [Repository Structure](#repository-structure)
+- [Author](#author)
 
 ---
 
@@ -20,7 +23,7 @@ Learning Verilog RTL Design, Simulation and Synthesis using open-source tools.
 
 ### RTL Design Through Simulation
 
-Introduction to Verilog RTL design, simulation, and waveform analysis using Icarus Verilog and GTKWave.
+Introduction to Verilog RTL design, simulation, and waveform analysis using Verilog and GTKWave.
 
 [View Day 1](Day_1/README.md)
 
@@ -45,14 +48,16 @@ Study of different flip-flop coding styles, synthesis, and RTL optimization usin
 [View Day 3](Day_3/README.md)
 
 ---
+
 ## Day 4
 
 ### RTL Simulation and Debugging
 
 Studied RTL simulation, testbench execution, waveform generation, and debugging of Verilog designs using simulation tools.
 
-[View Day 4](./Day_4)
+[View Day 4](Day_4/README.md)
 
+---
 
 ## Day 5
 
@@ -60,8 +65,9 @@ Studied RTL simulation, testbench execution, waveform generation, and debugging 
 
 Studied RTL synthesis, generated gate-level netlists, analyzed synthesized circuits, and understood the relationship between RTL code and the resulting hardware.
 
-[View Day 5](./Day_5)
+[View Day 5](Day_5/README.md)
 
+---
 
 ## Day 6
 
@@ -69,16 +75,67 @@ Studied RTL synthesis, generated gate-level netlists, analyzed synthesized circu
 
 Studied timing concepts, delay analysis, setup and hold requirements, and basic techniques used to optimize digital designs for better timing performance.
 
-[View Day 6](./Day_6)
+[View Day 6](Day_6/README.md)
+
+---
+
+# Physical Design
+
+The Physical Design modules cover the implementation of a digital design from synthesized netlist to physical layout using open-source EDA tools and the Sky130 PDK.
+
+## PD Module 1
+
+### Physical Design: RTL to GDSII using OpenLane
+
+Introduction to the Physical Design flow and the complete RTL-to-GDSII implementation process.
+
+Topics covered include:
+
+- ASIC Physical Design Flow
+- OpenLane
+- Sky130 PDK
+- Floorplanning
+- Placement
+- CTS
+- Routing
+- GDSII
+
+[View PD Module 1](PD_Module1/README.md)
+
+---
+
+## PD Module 2
+
+### Physical Design: Library Characterization and Timing Analysis
+
+Study of standard-cell library characterization and timing analysis used in the Physical Design flow.
+
+Topics covered include:
+
+- Standard Cell Libraries
+- Library Characterization
+- Liberty Files
+- PVT Conditions
+- Setup and Hold
+- Delay and Slew
+- Timing Analysis
+
+[View PD Module 2](PD_Module2/README.md)
+
+---
+
 ## Tools Used
 
-* **Verilog HDL** – RTL design description
-* **Icarus Verilog** – Verilog compilation and simulation
-* **GTKWave** – Simulation waveform analysis
-* **Yosys** – RTL synthesis and optimization
-* **SKY130 PDK** – Technology information and standard-cell libraries
-* **GitHub** – Project documentation and version control
-* **Ubuntu/Linux Terminal** – Running design and synthesis commands
+- Verilog
+- Yosys
+- GTKWave
+- OpenLane
+- Sky130 PDK
+- Magic
+- OpenROAD
+- ngspice
+- Linux
+- Docker
 
 ---
 
@@ -105,15 +162,14 @@ RTL_Workshop/
 ├── Day_6/
 │   └── README.md
 │
-└── README.md
+├── PD_Module1/
+│   └── README.md
+│
+└── PD_Module2/
+    └── README.md
 ```
-
-
-
----
-
 ## Author
 
-**Name:** Bathini Madhulika  
-**College:** Anurag University  
-**Branch:** Electronics and Communication Engineering (ECE)
+**B. Madhulika**  
+B.Tech – Electronics and Communication Engineering  
+Anurag University
