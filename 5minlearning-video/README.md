@@ -15,4 +15,4 @@ This video presents my learning from the RTL Design and Physical Design training
 - Physical Verification
 
 ## Video Link
-
+https://drive.google.com/file/d/1VN04b2xCxpsLhS4yeQFuY4ck0uFKdLDX/view?usp=sharing
