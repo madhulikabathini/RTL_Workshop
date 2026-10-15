@@ -16,3 +16,6 @@ This video presents my learning from the RTL Design and Physical Design training
 
 ## Video Link
 https://drive.google.com/file/d/1VN04b2xCxpsLhS4yeQFuY4ck0uFKdLDX/view?usp=sharing
+
+watch my workshop presentation
+https://drive.google.com/file/d/1JD9Yk75BYIRmLscLkqCQK9EqnYeTRNe8/view?usp=sharing
