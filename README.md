@@ -16,6 +16,12 @@ Learning VLSI RTL Design, Simulation, Synthesis, and Physical Design using open-
   - [PD Module 3](#pd-module-3)
   - [PD Module 4](#pd-module-4)
   - [PD Module 5](#pd-module-5)
+- [Workshop Sessions](#workshop-sessions)
+  - [Session 1](#session-1)
+  - [Session 2](#session-2)
+  - [Session 3](#session-3)
+- [VSDBabySoC Physical Design and STA](#vsdbabysoc-physical-design-and-sta)
+- [Learning Video](#learning-video)
 - [Tools Used](#tools-used)
 - [Repository Structure](#repository-structure)
 - [Author](#author)
@@ -84,13 +90,13 @@ Study of timing concepts, delay analysis, setup and hold requirements, and basic
 
 # Physical Design
 
-The Physical Design section covers the implementation of a digital design from synthesized RTL to physical layout using open-source EDA tools and the Sky130 PDK.
+The Physical Design section covers the implementation of digital designs from RTL and synthesis toward physical layout using open-source EDA tools and the SkyWater SKY130 PDK.
 
 ## PD Module 1
 
 ### Physical Design: RTL to GDSII using OpenLane
 
-Introduction to the Physical Design flow and the complete RTL-to-GDSII implementation process.
+Introduction to the Physical Design flow and the RTL-to-GDSII implementation process.
 
 Topics covered include:
 
@@ -131,7 +137,7 @@ Topics covered include:
 
 ### Physical Design: Advanced Implementation
 
-Study of advanced concepts in the Physical Design flow and implementation of synthesized designs using open-source EDA tools.
+Study of Physical Design concepts and implementation stages using open-source EDA tools.
 
 Topics covered include:
 
@@ -150,9 +156,9 @@ Topics covered include:
 
 ## PD Module 4
 
-### Physical Design: Timing Analysis, Clock Tree Synthesis & Physical Design
+### Physical Design: Timing Analysis, Clock Tree Synthesis and Physical Design
 
-This module explores the physical-implementation and timing-verification phases of an RTL-to-GDSII flow using the PicoRV32A core, OpenLane, OpenROAD, and the SKY130A PDK.
+This module explores physical implementation and timing verification using the PicoRV32A core, OpenLane, OpenROAD, and the SKY130A PDK.
 
 Topics covered include:
 
@@ -162,11 +168,9 @@ Topics covered include:
 - Placement
 - Clock Tree Synthesis (CTS)
 - Clock Buffering
-- Clock Skew
-- Clock Latency
+- Clock Skew and Clock Latency
 - Setup and Hold Timing
-- Data Arrival Time
-- Data Required Time
+- Data Arrival and Required Times
 - Slack Analysis
 - Real and Ideal Clock Analysis
 - Crosstalk-Induced Delay
@@ -181,9 +185,9 @@ Topics covered include:
 
 ## PD Module 5
 
-### Physical Design: Routing, DRC, Parasitic Extraction & TritonRoute
+### Physical Design: Routing, DRC, Parasitic Extraction and TritonRoute
 
-This module focuses on routing and post-routing verification using the SKY130 open-source PDK and OpenLane-based tools.
+This module focuses on routing and post-routing verification using the SKY130 PDK and OpenLane-based tools.
 
 Topics covered include:
 
@@ -197,8 +201,7 @@ Topics covered include:
 - SPEF Generation
 - TritonRoute
 - Route Guide Preprocessing
-- Intra-Layer Routing
-- Inter-Layer Routing
+- Intra-Layer and Inter-Layer Routing
 - Connectivity Handling
 - Routing Topology Optimization
 - OpenLane Routing Results
@@ -208,27 +211,111 @@ Topics covered include:
 
 ---
 
+# Workshop Sessions
+
+## Session 1
+
+Documentation and exercises completed during the first workshop session.
+
+[View Session 1](./Session_1)
+
+---
+
+## Session 2
+
+Documentation and exercises completed during the second workshop session.
+
+[View Session 2](./Session_2)
+
+---
+
+## Session 3
+
+### MUX and BabySoC Synthesis and Verification
+
+This session documents MUX design and simulation, synthesis and netlist analysis, and VSDBabySoC synthesis and verification.
+
+Topics covered include:
+
+- MUX RTL Simulation
+- Synthesized Circuit Representation
+- Gate-Level Netlist and Simulation
+- BabySoC Architecture
+- Yosys Synthesis and Optimization
+- Synthesis Statistics
+- Circuit Visualization using Graphviz
+- Simulation Waveform Analysis using GTKWave
+
+[View Session 3](./Session_3)
+
+---
+
+# VSDBabySoC Physical Design and STA
+
+This section contains additional documentation focused on VSDBabySoC physical design concepts and multi-corner Static Timing Analysis (STA), complementing the synthesis and verification material in Session 3.
+
+Topics covered include:
+
+- VSDBabySoC and the SKY130 HD Standard-Cell Library
+- Physical Design Flow
+- Multi-Corner Static Timing Analysis
+- Process, Voltage, and Temperature (PVT) Corners
+- Setup and Hold Timing
+- Worst Negative Slack (WNS)
+- Total Negative Slack (TNS)
+- Timing Report Analysis
+- Timing Results and Observations
+
+### Multi-Corner STA Results
+
+The updated STA report covers 16 PVT corners under an 11 ns clock constraint.
+
+The report lists:
+
+- 16 timing corners evaluated
+- 10 corners with positive setup WNS
+- 6 corners with negative setup WNS
+- Best reported setup WNS: +8.22 ns
+- Worst reported setup WNS: -31.85 ns
+
+Negative setup slack indicates timing violations at the affected corners. The updated report states that the values have not been independently verified by rerunning the full STA flow; therefore, they should be treated as documented report results rather than independently confirmed sign-off results.
+
+[View VSDBabySoC Physical Design and STA](./VSDBabySoC-Physical-Design)
+
+---
+
+# Learning Video
+
+The `5minlearning-video` folder contains the link to my workshop learning video.
+
+[View Learning Video Folder](./5minlearning-video)
+
+---
+
 # Tools Used
 
-- Verilog
+The tools and technologies documented across the repository include:
+
+- Verilog HDL
 - Yosys
 - GTKWave
 - Icarus Verilog
 - OpenLane
 - OpenROAD
 - OpenSTA
-- Sky130 PDK
+- SkyWater SKY130 PDK
 - Magic VLSI
 - TritonRoute
 - KLayout
-- LEF
-- DEF
+- LEF and DEF
 - SPEF
 - Linux
 - Docker
 - Oracle VM VirtualBox
 - Tcl
-- Git & GitHub
+- Git and GitHub
+
+Individual modules and sessions may use different subsets of these tools.
 
 ---
 
@@ -237,48 +324,57 @@ Topics covered include:
 ```text
 RTL_Workshop/
 │
+├── 5minlearning-video/
+│
 ├── Day_1/
 │   └── README.md
-│
 ├── Day_2/
 │   └── README.md
-│
 ├── Day_3/
 │   └── README.md
-│
 ├── Day_4/
 │   └── README.md
-│
 ├── Day_5/
 │   └── README.md
-│
 ├── Day_6/
 │   └── README.md
 │
 ├── PD_Module1/
 │   └── README.md
-│
 ├── PD_Module2/
 │   └── README.md
-│
 ├── PD_Module3/
 │   └── README.md
-│
 ├── PD_Module4/
 │   └── README.md
-│
 ├── PD_Module5/
 │   └── README.md
 │
-└── README.md
-
-
-
-
-
+├── Session_1/
+│   └── README.md
+├── Session_2/
+│   └── README.md
+├── Session_3/
+│   └── README.md
+│
+├── VSDBabySoC-Physical-Design/
+│   └── README.md
+│
+├── README.md
+└── README1.md
 ```
-## Author
 
-**B. Madhulika**  
+---
+
+# Author
+
+**B. Madhulika**
+
 B.Tech – Electronics and Communication Engineering  
 Anurag University
+
+
+
+
+
+
