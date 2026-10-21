@@ -279,4 +279,3 @@ Academic Year: 2026–2027
 
 ---
 
-**Important:** The image paths above are filenames to use when uploading your screenshots. Upload your actual screenshots into the `screenshots` folder and rename them to match the paths in this README. The README image links will not display until the corresponding image files are committed to GitHub.
