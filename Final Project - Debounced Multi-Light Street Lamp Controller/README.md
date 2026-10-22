@@ -195,14 +195,31 @@ Static timing analysis evaluates the design's setup and hold timing under the sp
 The project uses a 5.0 ns clock period and reports timing results for fast, typical, and slow process corners.
 
 ### Timing results
+<img width="1331" height="823" alt="image" src="https://github.com/user-attachments/assets/0a8de14b-fa3c-4795-8d33-c31989207877" />
 
-| Corner | Setup slack | Hold slack | TNS |
-|---|---:|---:|---:|
-| Fast | +3.59 ns | +0.31 ns | 0.00 ns |
-| Typical | +3.29 ns | +0.50 ns | 0.00 ns |
-| Slow | +2.22 ns | +0.61 ns | 0.00 ns |
+<img width="532" height="662" alt="image" src="https://github.com/user-attachments/assets/0ba47416-ed35-4eba-939b-1e64f03ae195" />
+ <img width="376" height="167" alt="image" src="https://github.com/user-attachments/assets/2da044c2-c9a5-4e6e-906e-d8123ebc4ec0" />
 
-All reported setup and hold slacks are positive.
+## Notes on STA Results
+
+**Result:** 15 of 19 corners meet timing. The four corners that fail are all at the slow process, -40°C condition (ss_n40C) with a reduced supply voltage:
+
+| Corner | Setup Slack (ns) | Hold Slack (ns) | TNS (ns) |
+|---|---|---|---|
+| ss_n40C_1v28 | -5.911 | -0.689 | -15.744 |
+| ss_n40C_1v35 | -2.411 | -0.135 | -3.540 |
+| ss_n40C_1v40 | -0.911 | 0.107 | -0.911 |
+| ss_n40C_1v44 | -0.045 | 0.250 | -0.045 |
+
+**Cause:** Setup slack improves steadily as supply voltage rises, so the violations come from gate delays increasing at slow process, low temperature and low voltage. The design does not meet the target clock period in this condition. Hold violations appear only at the two lowest voltages (1v28, 1v35) and need a separate check of the affected paths.
+
+**Possible fixes:**
+- Relax the clock period to match the slowest corner.
+- Optimize or restructure the critical path (for example, by upsizing cells or adding pipeline stages).
+- Re-run synthesis with tighter timing constraints.
+
+**Status:** Results are reported as-is. All ff, tt and ss corners at 1v60 and above pass with zero TNS.
+
 
 ### Screenshot 13 — Typical-corner timing report
 
@@ -236,8 +253,8 @@ The report states that the final GDSII file is approximately 335 KB.
 | Total wire length | 742 µm |
 | Vias | 199 |
 | Clock period | 5.0 ns |
-| Worst setup slack across reported corners | +2.22 ns |
-| Worst hold slack across reported corners | +0.31 ns |
+| Worst setup slack across reported corners | -5.911 ns |
+| Worst hold slack across reported corners | -0.689 ns |
 | Final layout | GDSII |
 | DRC violations | 0 |
 | LVS errors | 0 |
