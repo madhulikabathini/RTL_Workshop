@@ -316,7 +316,21 @@ The tools and technologies documented across the repository include:
 - Git and GitHub
 
 Individual modules and sessions may use different subsets of these tools.
+## Final Project – Debounced Multi-Light Street Lamp Controller
 
+A Verilog HDL-based street lamp controller for automatic dusk-to-dawn switching using a four-clock-edge debounce mechanism.
+
+**Project Documentation:** [View Final Project](https://github.com/madhulikabathini/RTL_Workshop/tree/main/Final%20Project%20-%20Debounced%20Multi-Light%20Street%20Lamp%20Controller)
+
+**Project Demonstration Video:** [Watch the 5-Minute Video](PASTE_YOUR_GOOGLE_DRIVE_VIDEO_LINK_HERE)
+
+### Project Contents
+- [RTL Design](https://github.com/madhulikabathini/RTL_Workshop/tree/main/Final%20Project%20-%20Debounced%20Multi-Light%20Street%20Lamp%20Controller/rtl)
+- [GDSII Layout](https://github.com/madhulikabathini/RTL_Workshop/tree/main/Final%20Project%20-%20Debounced%20Multi-Light%20Street%20Lamp%20Controller/gds)
+- [Reports](https://github.com/madhulikabathini/RTL_Workshop/tree/main/Final%20Project%20-%20Debounced%20Multi-Light%20Street%20Lamp%20Controller/reports)
+- [Screenshots](https://github.com/madhulikabathini/RTL_Workshop/tree/main/Final%20Project%20-%20Debounced%20Multi-Light%20Street%20Lamp%20Controller/screenshots)
+- [Static Timing Analysis Reports](https://github.com/madhulikabathini/RTL_Workshop/tree/main/Final%20Project%20-%20Debounced%20Multi-Light%20Street%20Lamp%20Controller/sta_all_corners)
+- [OpenLane Configuration](https://github.com/madhulikabathini/RTL_Workshop/blob/main/Final%20Project%20-%20Debounced%20Multi-Light%20Street%20Lamp%20Controller/config.tcl)
 ---
 
 # Repository Structure
