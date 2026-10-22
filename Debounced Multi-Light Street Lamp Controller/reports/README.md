@@ -1,1 +1,7 @@
-Synthesis, DRC, LVS, antenna, and static timing analysis reports will be added here after verifying the actual files.
+OpenLane reports for the Debounced Multi-Light Street Lamp Controller (SkyWater SKY130, sky130_fd_sc_hd).
+
+- final_summary_report.csv: summary of the full flow (TritonRoute, Magic DRC, antenna and LVS results all 0)
+- manufacturability_report.rpt: DRC, LVS and antenna check results
+- runtime_summary_report.rpt: runtime of each flow stage
+- 1-yosys_4.stat.rpt: synthesis cell statistics
+- 24-opensta_spef.timing.rpt: post-route timing report
