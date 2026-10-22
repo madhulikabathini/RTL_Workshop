@@ -75,7 +75,8 @@ The RTL design contains the debounce counter, registered light state, asynchrono
 
 ### Screenshot 1 — RTL design
 
-![RTL design screenshot](screenshots/01_rtl_design.png)
+<img width="1327" height="792" alt="image" src="https://github.com/user-attachments/assets/98f5a471-46e9-4691-979a-a0f29bc868b6" />
+
 
 ### Screenshot 2 — Testbench and simulation output
 
