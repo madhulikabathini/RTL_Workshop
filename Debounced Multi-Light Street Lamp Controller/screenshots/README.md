@@ -1,1 +1,1 @@
-screnshots will be added
+screenshots of the project.
