@@ -222,6 +222,7 @@ The report states that the final GDSII file is approximately 335 KB.
 ### Screenshot 15 — Final GDSII layout in Magic
 
 <img width="1358" height="855" alt="Screenshot 2026-10-10 151901" src="https://github.com/user-attachments/assets/b1cd4c65-a445-4ac3-9740-a32bb61b47a2" />
+<img width="986" height="800" alt="image" src="https://github.com/user-attachments/assets/c5d91f9a-8109-4e95-8374-397ea67c4bc7" />
 
 
 ## 16. Physical Design Summary
