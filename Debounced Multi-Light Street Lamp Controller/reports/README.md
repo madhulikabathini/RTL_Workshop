@@ -4,4 +4,4 @@ OpenLane reports for the Debounced Multi-Light Street Lamp Controller (SkyWater 
 - manufacturability_report.rpt: DRC, LVS and antenna check results
 - runtime_summary_report.rpt: runtime of each flow stage
 - 1-yosys_4.stat.rpt: synthesis cell statistics
-- 24-opensta_spef.timing.rpt: post-route timing report
+- 24-opensta_spef.min_max.rpt: post-route timing report (worst and total negative slack are both 0.00)
