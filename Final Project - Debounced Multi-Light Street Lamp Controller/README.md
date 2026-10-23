@@ -129,9 +129,10 @@ Logic synthesis converts the Verilog RTL into a technology-mapped netlist using 
 ### Screenshot 5 — OpenLane synthesis results
 
 <img width="1344" height="833" alt="Screenshot 2026-10-10 135425" src="https://github.com/user-attachments/assets/d6ef3433-90f0-4eb4-a11b-c9b899f2ffe3" />
-## Gate-level simulation result
+### Gate-level simulation result
 <img width="1337" height="883" alt="Screenshot 2026-10-10 152601" src="https://github.com/user-attachments/assets/4921100a-aaec-4aac-a87e-27e45e2b56fa" />
 
+The synthesized netlist was simulated with the same self-checking testbench as the RTL. The GLS run completed with all 36 checks passing and 0 errors, matching the RTL simulation results.
 
 ## 8. Floorplanning
 
@@ -213,7 +214,7 @@ Physical verification checks whether the final layout satisfies the relevant des
 ## 14. Static Timing Analysis (STA)
 The design was analysed at 16 PVT corners (6 fast, 2 typical, 8 slow). The initial fast/typical/slow results are the ff_n40C_1v95, tt_025C_1v80 and ss_100C_1v60 corners, which are included in these 16.
 Static timing analysis evaluates the design's setup and hold timing under the specified clock constraints.
-
+STA was run on the routed netlist with extracted parasitics (SPEF).
 The project uses a 5.0 ns clock period and reports timing results for fast, typical, and slow process corners.
 
 ### Timing results
