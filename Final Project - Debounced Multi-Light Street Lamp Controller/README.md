@@ -11,7 +11,29 @@ The Debounced Multi-Light Street Lamp Controller is a digital design implemented
 The design uses a debounce mechanism to prevent unwanted switching caused by unstable sensor inputs. The input must differ from the current light state for four consecutive clock edges before the controller changes its output.
 
 The project covers RTL design, functional verification, logic synthesis, gate-level simulation, floorplanning, power planning, placement, clock tree synthesis, routing, static timing analysis, physical verification, and final GDSII generation.
+## Problem Statement and Proposed Solution
 
+Street lights driven directly by a light sensor can flicker on and off when the
+sensor signal is noisy (passing headlights, clouds, sensor jitter). This wastes
+energy and shortens lamp life. This design adds a hardware debounce stage: the
+lights change state only after the darkness input has disagreed with the current
+state for 4 consecutive clock edges.
+
+## Proposal Statement
+
+My project is a debounced multi-light street lamp controller that solves
+flickering lamp switching caused by noisy light-sensor input by taking a clock,
+an asynchronous active-high reset, and a darkness signal (dark) as inputs and
+producing a 4-bit lamp control output (lights[3:0]) as outputs. It uses a
+debounce counter and a registered light-state flip-flop as its main sequential logic.
+
+## Test Cases
+- Reset clears the counter and turns all lights OFF
+- dark held for 4+ cycles turns all four lights ON
+- dark held for 3 cycles or fewer (bounce) does not change the lights
+- Input returning to match the state clears the counter
+- Same checks in the OFF direction
+- Reset asserted mid-count
 ## 2. Objectives
 
 - Design a debounced street light controller using Verilog HDL.
@@ -189,7 +211,7 @@ Physical verification checks whether the final layout satisfies the relevant des
 
 
 ## 14. Static Timing Analysis (STA)
-
+The design was analysed at 16 PVT corners (6 fast, 2 typical, 8 slow). The initial fast/typical/slow results are the ff_n40C_1v95, tt_025C_1v80 and ss_100C_1v60 corners, which are included in these 16.
 Static timing analysis evaluates the design's setup and hold timing under the specified clock constraints.
 
 The project uses a 5.0 ns clock period and reports timing results for fast, typical, and slow process corners.
@@ -202,7 +224,7 @@ The project uses a 5.0 ns clock period and reports timing results for fast, typi
 
 ## Notes on STA Results
 
-**Result:** 15 of 19 corners meet timing. The four corners that fail are all at the slow process, -40°C condition (ss_n40C) with a reduced supply voltage:
+**Result:** 12 of 16 corners meet timing. The four corners that fail are all at the slow process, -40°C condition (ss_n40C) with a reduced supply voltage:
 
 | Corner | Setup Slack (ns) | Hold Slack (ns) | TNS (ns) |
 |---|---|---|---|
@@ -218,7 +240,7 @@ The project uses a 5.0 ns clock period and reports timing results for fast, typi
 - Optimize or restructure the critical path (for example, by upsizing cells or adding pipeline stages).
 - Re-run synthesis with tighter timing constraints.
 
-**Status:** Results are reported as-is. All ff, tt and ss corners at 1v60 and above pass with zero TNS.
+**Status:** **Status:** Results are reported as-is. All 12 corners from the ff, tt and ss groups other than the four cold low-voltage corners pass with zero TNS, including the hot slow corner at 1.40 V (ss_100C_1v40, +0.749 ns).
 
 
 ### Screenshot 13 — Typical-corner timing report
@@ -253,8 +275,10 @@ The report states that the final GDSII file is approximately 335 KB.
 | Total wire length | 742 µm |
 | Vias | 199 |
 | Clock period | 5.0 ns |
-| Worst setup slack across reported corners | -5.911 ns |
-| Worst hold slack across reported corners | -0.689 ns |
+| Worst setup slack, 12 in-range corners | +0.749 ns (ss_100C_1v40) |
+| Worst hold slack, 12 in-range corners | +0.309 ns (ff_n40C_1v95) |
+| Worst setup slack all 16 reported corners | -5.911 ns (ss_n40C_1v28, off-spec) |
+| Worst hold slack all 16 reported corners | -0.689 ns  (ss_n40C_1v28, off-spec)|
 | Final layout | GDSII |
 | DRC violations | 0 |
 | LVS errors | 0 |
