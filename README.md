@@ -10,6 +10,7 @@ Learning VLSI RTL Design, Simulation, Synthesis, and Physical Design using open-
 - [Day 4 - RTL Simulation and Debugging](#day-4)
 - [Day 5 - Synthesis and Netlist Analysis](#day-5)
 - [Day 6 - Timing Analysis and Optimization](#day-6)
+-[Final Project ](#Final Project - Debounced Multi-Light Street Lamp Controller).
 - [Physical Design](#physical-design)
   - [PD Module 1](#pd-module-1)
   - [PD Module 2](#pd-module-2)
