@@ -217,6 +217,9 @@ Static timing analysis evaluates the design's setup and hold timing under the sp
 STA was run on the routed netlist with extracted parasitics (SPEF).
 The project uses a 5.0 ns clock period and reports timing results for fast, typical, and slow process corners.
 
+**Setup slack** is the margin by which data arrives before the capturing clock edge. **Hold slack** is the margin by which data stays stable after the clock edge. Positive slack means timing is met. **TNS** (total negative slack) is the sum of all negative slacks, so 0.000 means no violating paths.
+
+**Corner names:** ff, tt and ss mean fast, typical and slow process. The temperature (n40C = -40 °C, 025C = 25 °C, 100C = 100 °C) and supply voltage (1v28 = 1.28 V to 1v95 = 1.95 V) complete each corner.
 ### Timing results
 <img width="1331" height="823" alt="image" src="https://github.com/user-attachments/assets/0a8de14b-fa3c-4795-8d33-c31989207877" />
 
@@ -241,7 +244,7 @@ The project uses a 5.0 ns clock period and reports timing results for fast, typi
 - Optimize or restructure the critical path (for example, by upsizing cells or adding pipeline stages).
 - Re-run synthesis with tighter timing constraints.
 
-**Status:** **Status:** Results are reported as-is. All 12 corners from the ff, tt and ss groups other than the four cold low-voltage corners pass with zero TNS, including the hot slow corner at 1.40 V (ss_100C_1v40, +0.749 ns).
+**Status:**  Results are reported as-is. All 12 corners from the ff, tt and ss groups other than the four cold low-voltage corners pass with zero TNS, including the hot slow corner at 1.40 V (ss_100C_1v40, +0.749 ns).
 
 
 ### Screenshot 13 — Typical-corner timing report
