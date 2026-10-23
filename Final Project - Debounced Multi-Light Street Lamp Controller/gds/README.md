@@ -1,1 +1,1 @@
-
+Final GDSII layout of the Debounced Multi-Light Street Lamp Controller, generated with the OpenLane RTL-to-GDSII flow on the SkyWater SKY130 library (sky130_fd_sc_hd). File size is about 335 KB. Sign-off results for this layout: Magic DRC 0, LVS errors 0, antenna violations 0.
