@@ -201,6 +201,8 @@ Examples of optimization operations include:
 - How synthesis improves the hardware implementation.
 <img width="709" height="513" alt="image" src="https://github.com/user-attachments/assets/dea5d254-ee3b-49cb-a544-e6ef9fbaf288" />
 
+<img width="1919" height="1028" alt="Screenshot 2026-08-23 134319" src="https://github.com/user-attachments/assets/4c8c7f40-a9d6-4b95-ba43-0162297eacce" />
+
 ---
 
 # 8. BabySoC Synthesis Statistics
@@ -355,6 +357,7 @@ behavior of the synthesized design.
 - How clock signals control sequential circuits.
 - How reset affects the design.
 - How GTKWave is used for hardware verification.
+<img width="1919" height="1029" alt="Screenshot 2026-08-22 152416" src="https://github.com/user-attachments/assets/e5d38b3c-9f12-4a8a-969b-9365ff67b877" />
 
 <img width="1584" height="744" alt="image" src="https://github.com/user-attachments/assets/107173e1-a452-4ef7-8f33-2c5213f8d346" />
 
